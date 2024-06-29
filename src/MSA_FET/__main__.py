@@ -1,8 +1,8 @@
 import argparse
 from pathlib import Path
 
-from .single import FeatureExtractionTool
-from .install import download_missing, force_redownload
+from MSA_FET.single import FeatureExtractionTool
+from MSA_FET.install import download_missing, force_redownload
 
 
 def parse_args():

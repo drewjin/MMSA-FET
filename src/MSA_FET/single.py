@@ -7,6 +7,7 @@ import time
 from glob import glob
 from logging.handlers import RotatingFileHandler
 from pathlib import Path
+from os.path import join
 
 import numpy as np
 import pandas as pd
@@ -14,6 +15,7 @@ import torch
 
 from .utils import *
 
+root_path = r'/home/drew/Desktop/Research/MMSA-FET'
 
 class FeatureExtractionTool(object):
     """
@@ -46,8 +48,8 @@ class FeatureExtractionTool(object):
         self,
         config : dict | str,
         dataset_root_dir : Path | str = None,
-        tmp_dir : Path | str = Path.home() / '.MMSA-FET/tmp',
-        log_dir : Path | str = Path.home() / '.MMSA-FET/log',
+        tmp_dir : Path | str = join(root_path,'.MMSA-FET/tmp'),
+        log_dir : Path | str = join(root_path, '.MMSA-FET/log'),
         verbose : int = 1
     ) -> None:
         if type(config) == dict:
@@ -56,7 +58,7 @@ class FeatureExtractionTool(object):
             if Path(config).is_file():
                 with open(config, 'r') as f:
                     self.config = json.load(f)
-            elif Path(name := Path(__file__).parent / 'example_configs' / f"{config}.json").is_file():
+            elif Path(name := Path(__file__).parent / 'configs' / f"{config}.json").is_file():
                 with open(name, 'r') as f:
                     self.config = json.load(f)
             else:

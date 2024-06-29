@@ -9,6 +9,7 @@ import pandas as pd
 
 from ..baseExtractor import baseVideoExtractor
 
+workplace_root = '/home/drew/Desktop/Research'
 
 class openfaceExtractor(baseVideoExtractor):
     """
@@ -26,7 +27,7 @@ class openfaceExtractor(baseVideoExtractor):
                 self.pool_size = self.config['average_over']
                 
             self.args = self._parse_args(self.config['args'])
-            self.tool_dir = Path(__file__).parent.parent.parent / "exts" / "OpenFace"
+            self.tool_dir = Path(workplace_root)  / "extensions" / "OpenFace"
             if platform.system() == 'Windows':
                 self.tool = self.tool_dir / "FeatureExtraction.exe"
             elif platform.system() == 'Linux':
