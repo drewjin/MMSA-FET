@@ -10,3 +10,4 @@ exts
 tmp.csv
 build
 .MMSA-FET
+result/
