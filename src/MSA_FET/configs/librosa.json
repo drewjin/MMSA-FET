@@ -9,7 +9,7 @@
       "chroma_cqt": {},
       "chroma_cens": {},
       "mfcc": {
-        "n_mfcc": 13,
+        "n_mfcc": 20,
         "htk": true
       },
       "rms": {},

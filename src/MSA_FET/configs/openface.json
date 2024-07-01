@@ -1,7 +1,7 @@
 {
   "video": {
     "tool": "openface",
-    "fps": 25,
+    "fps": 30,
     "multiFace": {
       "enable": false,
       "device": "cuda:0",
@@ -11,14 +11,14 @@
       "minFaceSize": 1,
       "cropScale": 0.4
     },
-    "average_over": 1,
+    "average_over": 5,
     "args": {
       "hogalign": false,
       "simalign": false,
       "nobadaligned": false,
       "landmark_2D": true,
-      "landmark_3D": false,
-      "pdmparams": false,
+      "landmark_3D": true,
+      "pdmparams": true,
       "head_pose": true,
       "action_units": true,
       "gaze": true,
