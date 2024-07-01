@@ -21,7 +21,7 @@
       "pdmparams": false,
       "head_pose": true,
       "action_units": true,
-      "gaze": false,
+      "gaze": true,
       "tracked": false
     }
   }

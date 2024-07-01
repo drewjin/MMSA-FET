@@ -31,7 +31,7 @@ class openfaceExtractor(baseVideoExtractor):
             if platform.system() == 'Windows':
                 self.tool = self.tool_dir / "FeatureExtraction.exe"
             elif platform.system() == 'Linux':
-                self.tool = self.tool_dir / "FeatureExtraction"
+                self.tool = self.tool_dir / "bin/FeatureExtraction" # adding bin folder
             else:
                 raise RuntimeError("Cannot Determine OS type.")
             if not self.tool.is_file():
