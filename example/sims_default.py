@@ -11,7 +11,7 @@ fet = FeatureExtractionTool("sims_default")
 # fet = FeatureExtractionTool("custom_config.json")
 
 # extract features for single video
-file = r'/home/drew/Documents/0010.mp4'
+file = r'/home/drew/Documents/10.mp4'
 feature1 = fet.run_single(file)
 result_dir = 'result'
 if not os.path.exists(result_dir):
